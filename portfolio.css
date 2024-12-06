@@ -1,0 +1,290 @@
+/* Réinitialisation des marges et des paddings par défaut */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #fff;
+    z-index: 9;
+}
+
+/* Styles de base pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+}
+
+/* Conteneur principal pour centrer le contenu */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style de l'en-tête */
+.banner {
+    background: linear-gradient(45deg, #0006b6, #159ac3, #ee5700);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.header-text {
+    text-align: left;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+/* Style des sections */
+.section {
+    padding: 50px 0;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    background: linear-gradient(45deg, #0006b6, #159ac3, #ee5700);
+    background-size: 300% 300%;
+    animation: gradient-animation 4s ease infinite;
+    --webkit-background-clip: text;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.section p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Style des projets */
+.project {
+    background-color: #e0f7fa;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    margin-bottom: 10px;
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #0077b6;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.project a:hover {
+    background: #023e8a;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    text-align: center; 
+}
+
+#contact-links {
+    color: #023e8a;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formulaire div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formulaire input, 
+.formulaire textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px; 
+    box-sizing: border-box;
+}
+
+
+.formulaire label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    text-align: left; 
+    width: 100%;
+}
+
+
+button[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; 
+    max-width: 200px;
+    margin-top: 15px; 
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background: linear-gradient(45deg, #0006b6, #159ac3, #ee5700);
+    padding: 20px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .project {
+        padding: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
