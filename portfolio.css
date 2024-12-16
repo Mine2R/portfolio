@@ -1,8 +1,8 @@
-/* Réinitialisation des marges et des paddings par défaut */
 body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 h2 {
@@ -10,23 +10,20 @@ h2 {
     z-index: 9;
 }
 
-/* Styles de base pour le corps de la page */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     line-height: 1.6;
     background-color: #f4f4f9;
     color: #333;
     text-align: center;
 }
 
-/* Conteneur principal pour centrer le contenu */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Style de l'en-tête */
 .banner {
     background: linear-gradient(45deg, #0006b6, #159ac3, #ee5700);
     color: #fff;
@@ -88,7 +85,6 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Style des sections */
 .section {
     padding: 50px 0;
     background-color: #fff;
@@ -105,6 +101,7 @@ header nav ul li a:hover {
     background-size: 300% 300%;
     animation: gradient-animation 4s ease infinite;
     --webkit-background-clip: text;
+    border-radius: 10px;
 }
 
 @keyframes gradient-animation {
@@ -129,7 +126,6 @@ header nav ul li a:hover {
     font-size: 1.1rem;
 }
 
-/* Style des projets */
 .project {
     background-color: #e0f7fa;
     padding: 20px;
@@ -254,6 +250,7 @@ footer p {
     margin: 0;
     font-size: 14px;
     color: #fff;
+    border-radius: 5px;
 }
 
 @media (max-width: 768px) {
