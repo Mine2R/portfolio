@@ -1,26 +1,19 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST["name"]);
-    $email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
-    $message = htmlspecialchars($_POST["message"]);
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
 
-    if (!$email) {
-        echo "Adresse email invalide.<br>";
-        exit();
-    }
 
-    $to = "m.boussamgane@gmail.com"; // Remplace par ton adresse email
-    $subject = "Nouveau message de ton portfolio";
-    $headers = "From: " . $email . "\r\n" .
-               "Reply-To: " . $email . "\r\n" .
-               "Content-Type: text/plain; charset=UTF-8";
-
-    $body = "Nom: $name\nEmail: $email\nMessage:\n$message";
+    $to = "m.boussamgane@gmail.com";  
+    $subject = "Demande de contact depuis ton portfolio";
+    $body = "Nom : $name\nEmail : $email\nMessage : $message";
+    $headers = "From: $email" . "\r\n" . "Reply-To: $email";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo "Message envoyé avec succès.<br>";
+        echo "Merci de nous avoir contacté ! Nous vous répondrons bientôt.";
     } else {
-        echo "Erreur lors de l'envoi du message.<br>";
+        echo "Une erreur est survenue. Veuillez réessayer.";
     }
 }
 ?>
@@ -31,9 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Mina Boussamgane</title>
     <link rel="stylesheet" href="portfolio.css">
-
-    </a>
-    
 </head>
 <body>
     <header class="banner">
@@ -92,9 +82,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="contact-links">
                     <a href="mailto:m.boussamgane@gmail.com"><img src="mail.jpg" alt="Email" style="width: 40px; height: 40px;"></a><br>
                     <a href="https://www.linkedin.com/in/mina-boussamgane" target="_blank"><img src="linkedin.png" alt="LinkedIn" style="width: 40px; height: 40px;"></a><br>
-                    <a href="https://github.com/Mine2R" target="_blank"><img src="github.png" alt="GitHub" style="width: 40px; height: 40px;"><br></a>
+                    <a href="https://github.com/Mine2R" target="_blank"><img src="github.png" alt="GitHub" style="width: 40px; height: 40px;"></a><br>
                     <a href="CV.pdf.pdf" download>Télécharger mon CV</a>
-                    
                 </div>
             </div>
         </section>
@@ -106,6 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="formulaire">
+                    <!-- Formulaire de contact -->
                     <form action="portfolio.php" method="post" class="form" data-aos="fade-up" data-aos-delay="200">
                         <div class="name">
                             <label for="name-field">Votre nom/prénom</label>
@@ -133,3 +123,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </footer>
 </body>
 </html>
+
