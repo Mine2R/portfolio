@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Allow: /images/
+
+Sitemap: https://minaboussamgane.netlify.app/sitemap.xml
+
