@@ -4,7 +4,6 @@ body, h1, h2, h3, p, ul, li, a {
     box-sizing: border-box;
 }
 
-
 h2 {
     color: #fff;
     z-index: 9;
@@ -15,7 +14,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f9;
     color: #333;
-    text-align: center;
+    text-align: center; 
 }
 
 .container {
@@ -30,7 +29,7 @@ body {
     padding: 50px 20px;
     text-align: center;
     width: 100%;
-    height: 30vh;
+    height: 20vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,37 +38,48 @@ body {
 .header-content {
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: flex-start; 
     text-align: left;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .profile-photo {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     object-fit: cover;
+    padding-right: 20%;
+    padding-left: 20%;
+    margin-left: -20%;
 }
 
 .header-text {
-    text-align: left;
+    text-align: center;
+    margin-left: 20px;
 }
 
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    color: #fff;
+    text-align: center; 
 }
 
 header p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    color: #fff; 
+    text-align: center; 
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 header nav ul li a {
@@ -102,6 +112,17 @@ header nav ul li a:hover {
     animation: gradient-animation 4s ease infinite;
     --webkit-background-clip: text;
     border-radius: 10px;
+}
+
+.section {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes gradient-animation {
@@ -234,14 +255,37 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3;
+}
+
+.project a {
+    transition: transform 0.3s ease;
+}
+
 footer {
     background: linear-gradient(45deg, #0006b6, #159ac3, #ee5700);
     padding: 20px 0;
     text-align: center;
     bottom: 0;
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 footer p {
