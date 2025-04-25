@@ -13,8 +13,8 @@
 
 <body class="bg-black text-white font-sans">
   <!-- Section Héro -->
-  <section class="relative text-center py-24 px-4 overflow-hidden bg-gradient-to-br from-yellow-500/30 via-transparent to-indigo-600/30">
-    <div class="relative z-10 flex flex-col items-center gap-6">
+    <section class="relative text-center py-24 px-4 overflow-hidden bg-gradient-to-br from-yellow-500/30 via-transparent to-indigo-600/30">
+        <div class="relative z-10 flex flex-col items-center gap-6">
 
         <section class="about-and-profil-container flex justify-between px-6 md:px-10">
             <!-- Section À propos -->
@@ -54,18 +54,18 @@
           </section>
 
   <!-- Navigation -->
-  <header class="bg-black shadow-md">
-      <nav>
+<header class="bg-black shadow-md">
+      <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-black shadow transition-transform duration-300">
         <ul class="flex gap-6 text-sm md:text-base">
           <li><a href="#about" class="hover:text-yellow-400">À propos</a></li>  
           <li><a href="#projects" class="hover:text-yellow-400">Projets</a></li>
           <li><a href="#skills" class="hover:text-yellow-400">Compétences</a></li>
         </ul>
       </nav>
-  </header>
+</header>
 
   <!-- Contenu principal -->
-  <main class="space-y-20 mt-10">
+<main class="space-y-20 mt-10">
     <section id="about" class="section about-card">
         <div class="container bg-gray-800 p-8 rounded-xl shadow-lg">
             <h2 class="section-title">À propos de moi</h2>
@@ -85,6 +85,9 @@
           <p class="text-sm text-gray-300 mb-2"><strong>Technos :</strong> HTML, CSS, JavaScript</p>
           <p class="mb-4">Site web dédié aux fans de Beyoncé, offrant une expérience fluide et interactive.</p>
           <a href="https://inquisitive-duckanoo-875a2c.netlify.app/" class="text-yellow-400 hover:underline" target="_blank">Voir le projet</a>
+          <a href="https://tonlienversleprojet.com" class="project-deployed-link">
+            <img src="img1.jpg" alt="Aperçu de mon projet" class="deployed-preview">
+          </a>
         </div>
 
         <!-- Projet 2 -->
@@ -150,22 +153,26 @@
           <p class="text-xl font-semibold mb-2 text-gray-300">Intéressé(e) par mon profil ? N'hésitez pas à me contacter !</p>
         </div>
     </section>
-    
-      
-      
-      
-      
-      
-      
-      
-      
+</main>
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
   
+    window.addEventListener("scroll", function () {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   
+      if (scrollTop > lastScrollTop) {
+        // scroll vers le bas -> cache la nav
+        navbar.style.transform = "translateY(-100%)";
+      } else {
+        // scroll vers le haut -> affiche la nav
+        navbar.style.transform = "translateY(0)";
+      }
   
-    
-
-  </main>
-
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // évite les valeurs négatives
+    });
+  </script>
+  
 </body>
 </html>
 
