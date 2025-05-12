@@ -338,18 +338,21 @@ header p {
 
 .about-card {
     border-radius: 12px;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    /* Suppression de l'ombre grise */
+    box-shadow: none;
     color: #333;
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.1em;
     line-height: 1.7;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: none; /* on enlève les transitions */
 }
 
+/* On désactive complètement l'effet hover */
 .about-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: none;
+    box-shadow: none;
 }
+
 
 .project {
     display: flex;
