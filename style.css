@@ -1,0 +1,26 @@
+/* Pour que les deux colonnes soient bien alignées verticalement */
+#a-propos .grid {
+  align-items: start; /* ou center si tu préfères un alignement centré */
+}
+
+/* Ajustement des marges internes pour homogénéiser l'espacement */
+#a-propos .text-center p {
+  text-align: left; /* meilleure lisibilité en desktop */
+}
+
+/* Harmonisation du style des compétences pour coller au texte */
+#a-propos .space-y-5 > div {
+  margin-bottom: 1.5rem; /* espace uniforme entre les blocs de compétences */
+}
+
+/* S'assurer que les colonnes prennent bien la même hauteur si besoin */
+#a-propos .text-center,
+#a-propos .md\:text-left {
+  height: 100%;
+}
+
+/* Optionnel : limite la largeur des paragraphes à gauche pour meilleur équilibre */
+#a-propos .text-center.md\:text-center {
+  max-width: 95%; /* ou un width fixe comme 90% si trop large */
+  margin: 0 auto;
+}
