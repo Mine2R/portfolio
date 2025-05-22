@@ -1,195 +1,232 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio de Mina Boussamgane" />
-  <meta name="keywords" content="Mina Boussamgane, développeur web, portfolio, projets web, HTML, CSS, JavaScript, React" />
-  <meta name="author" content="Mina Boussamgane" />
-  <link rel="stylesheet" href="./portfolio.css">
-  <title>Portfolio - Mina Boussamgane</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/jpg" href="logo portfolio.jpg">
 </head>
+<body class="text-gray-600">
+    <style>
+ html, body {
+  height: 100%;
+  margin: 0;
+}
 
-<body class="bg-black text-white font-sans">
-  <!-- Section Héro -->
-    <section class="relative text-center py-24 px-4 overflow-hidden bg-gradient-to-br from-yellow-500/30 via-transparent to-indigo-600/30">
-        <div class="relative z-10 flex flex-col items-center gap-6">
+body {
+  background-color: #ECECEC;
+  min-height: 100vh;
+}
+.skill-bar {
+  width: 0; /* Point de départ pour l'animation */
+  height: 10px; /* ou 2.5rem si tu préfères */
+  border-radius: 9999px; /* coins arrondis */
+  transition: width 1.2s ease-in-out;
+}
 
-        <section class="about-and-profil-container flex justify-between px-6 md:px-10">
-            <!-- Section À propos -->
-            <section class="about-section w-full md:w-1/2 py-12 md:py-24 mt-10">
-              <div class="about-container">
-                <div class="about-text">
-                  <p>
-                    <strong class="highlight ">Développeuse web passionnée<br></strong>par la création d’expériences digitales<br>
-                    Mon objectif est de combiner esthétique, fluidité et performance à travers chaque projet que je réalise.<br>
-                    J’aime transformer des idées en sites web concrets, accessibles et élégants.
-                  </p>
+
+</style>
+
+
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4">
+                            <img src="logo portfolio.jpg" alt="Logo" class="h-8 w-8">
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="#accueil" class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-800 transition duration-300">Accueil</a>
+                        <a href="#a-propos" class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-800 transition duration-300">À Propos</a>
+                        <a href="#projet" class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-800 transition duration-300">Projets</a>
+                    </div>
                 </div>
-              </div>
-            </section>
-          
-            <!-- Section Profil -->
-            <section class="profil-section w-full md:w-1/2 ">
-              <div class="profil-card">
-                <img src="photo moi.jpg" alt="Photo de Mina Boussamgane" class="photo-profil">
-                <h1 class="nom">Mina Boussamgane</h1>
-                <p class="titre">Développeuse web passionnée</p>
-                <div class="flex items-center gap-4 mt-6">
-                    <a href="mailto:m.boussamgane@gmail.com">
-                      <img src="mail.jpg" alt="Email" class="w-8 h-8 transition-transform transform hover:scale-125 hover:text-yellow-400" />
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="https://github.com/" target="_blank" class="p-2 text-gray-500 hover:text-gray-800 transition duration-300">
+                        <img src="githup.png" alt="GitHub" class="h-6 w-6">
                     </a>
-                    <a href="https://www.linkedin.com/in/mina-boussamgane" target="_blank">
-                      <img src="linkedin.png" alt="LinkedIn" class="w-8 h-8 transition-transform transform hover:scale-125 hover:text-yellow-400" />
+                    <a href="https://linkedin.com/" target="_blank" class="p-2 text-gray-500 hover:text-gray-800 transition duration-300">
+                        <img src="linkedin.png" alt="LinkedIn" class="h-6 w-6">
                     </a>
-                    <a href="https://github.com/Mine2R" target="_blank">
-                      <img src="githup.png" alt="GitHub" class="w-8 h-8 transition-transform transform hover:scale-125 hover:text-yellow-400" />
-                    </a>
-                    <a href="CV Mina B.pdf" download class="bg-yellow-400 text-black px-4 py-2 rounded-lg hover:bg-yellow-300 transition">Télécharger mon CV</a>
-                  </div>
-                  
-              </div>
-            </section>
-          </section>
-
-  <!-- Navigation -->
-<header class="bg-black shadow-md">
-      <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-black shadow transition-transform duration-300">
-        <ul class="flex gap-6 text-sm md:text-base">
-          <li><a href="#about" class="hover:text-yellow-400">À propos</a></li>  
-          <li><a href="#projects" class="hover:text-yellow-400">Projets</a></li>
-          <li><a href="#skills" class="hover:text-yellow-400">Compétences</a></li>
-        </ul>
-      </nav>
-</header>
-
-  <!-- Contenu principal -->
-<main class="space-y-20 mt-10">
-    <section id="about" class="section about-card">
-        <div class="container bg-gray-800 p-8 rounded-xl shadow-lg">
-            <h2 class="section-title">À propos de moi</h2>
-            <p>Actuellement en Bachelor 3 de développement web, je suis passionnée par la création de solutions digitales innovantes. Forte de mes expériences professionnelles variées, j'ai développé des compétences solides en gestion de projet et en communication.<br>Je mets cette expertise au service du développement web, en combinant mes connaissances en front-end et back-end.</p>
-            <p>Je suis en cours d’apprentissage de technologies telles que Python, PHP, JavaScript, React, Node.js, et MongoDB.<br>Je m'efforce de renforcer mes compétences pratiques grâce à des projets concrets.</p>
-            <p>Mon objectif est de continuer à apprendre tout en apportant ma contribution à des projets innovants.<br>J'allie mon engagement technique et mes compétences acquises dans des domaines tels que le commercial et l'immobilier.</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </nav>
 
-<!-- Projets -->
-<section id="projects" class="px-6 md:px-10 max-w-6xl mx-auto">
-  <h2 class="text-3xl font-bold text-yellow-300 mb-10">Mes Projets</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-    
-    <!-- Projet 1 -->
-    <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-      <h3 class="text-xl font-semibold mb-2">Création d'un Fansite</h3>
-      <p class="text-sm text-gray-300 mb-2"><strong>Technos :</strong> HTML, CSS, JavaScript</p>
-      <p class="mb-4">Site dédié à Beyoncé.</p>
-      <a href="https://inquisitive-duckanoo-875a2c.netlify.app/" class="text-yellow-400 hover:underline font-bold" target="_blank">Voir le projet</a>
-      <a href="https://inquisitive-duckanoo-875a2c.netlify.app/" target="_blank">
-        <img src="img1.jpg" alt="Aperçu du projet Fansite" class="mt-4 w-full rounded-lg object-cover">
-      </a>
+  <section id="accueil" class="py-20 ">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center justify-between">
+      <!-- Texte de gauche -->
+      <div class="md:w-2/3">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6 animate-fade-in-down">
+          Développeur Web Passionné
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 animate-fade-in-down delay-200">
+          Créateur de sites web modernes et responsifs
+        </p>
+        <a href="CV Mina B.pdf" download
+          class="inline-block bg-blue-500 text-white px-8 py-3 rounded-full hover:bg-blue-600 transition duration-300 animate-fade-in-down delay-300">
+          Télécharger mon CV
+        </a>
+      </div>
+
+      <!-- Carte photo à droite -->
+      <div class="md:w-1/3 mt-10 md:mt-0 flex justify-center animate-fade-in-up delay-500">
+        <div class="bg-white rounded-full shadow-xl p-2 hover:scale-105 transition-transform duration-300">
+          <img src="photo moi.jpg" alt="Photo de profil" class="w-48 md:w-56 rounded-full object-cover">
+        </div>
+      </div>
     </div>
-
-    <!-- Projet 2 -->
-    <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-      <h3 class="text-xl font-semibold mb-2">Galerie de voyage</h3>
-      <p class="text-sm text-gray-300 mb-2"><strong>Technos :</strong> HTML, CSS, JS, Tailwind, Bootstrap</p>
-      <p class="mb-4">Voyage au cœur du Sud marocain.</p>
-      <a href="https://guelmim-boussamganefamily.netlify.app/" class="text-yellow-400 hover:underline font-bold" target="_blank">Voir le projet</a>
-      <a href="https://guelmim-boussamganefamily.netlify.app/" target="_blank">
-        <img src="img2.jpg" alt="Aperçu Galerie de voyage" class="mt-4 w-full rounded-lg object-cover">
-      </a>
-    </div>
-
-    <!-- Projet 3 -->
-    <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-      <h3 class="text-xl font-semibold mb-2">Site de recette</h3>
-      <p class="text-sm text-gray-300 mb-2"><strong>Technos :</strong> HTML, CSS, JS, JSON</p>
-      <p class="mb-4">Site de recettes.</p>
-      <a href="https://tranquil-dango-aea124.netlify.app/" class="text-yellow-400 hover:underline font-bold" target="_blank">Voir le projet</a>
-      <a href="https://tranquil-dango-aea124.netlify.app/" target="_blank">
-        <img src="img3.jpg" alt="Aperçu Site de recette" class="mt-4 w-full rounded-lg object-cover">
-      </a>
-    </div>
-
   </div>
 </section>
 
 
-    <!-- Compétences -->
-    <section id="skills" class="px-6 md:px-10 max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold text-yellow-300 mb-4">Mes Compétences</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Carte Langages -->
-        <div class="bg-gray-800 p-4 rounded-xl shadow-lg hover:scale-105 transition">
-          <h3 class="text-xl font-semibold text-yellow-400 mb-4">Langages</h3>
-          <ul class="list-disc pl-6 space-y-2 text-gray-200">
-            <li>CSS</li>
-            <li>PHP</li>
-            <li>JavaScript</li>
-            <li>jQuery</li>
-            <li>Python</li>
-          </ul>
-        </div>
+<section id="a-propos" class="py-20 fade-in-section opacity-0 translate-y-8 transition-all duration-1000">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">À Propos</h2>
+    
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Colonne 1 : Texte -->
+      <div class="text-center md:text-center">
+        <h3 class="text-2xl font-bold mb-4">Qui suis-je ?</h3>
+        <p class="text-gray-700 leading-relaxed space-y-2">
+          <span class="block">Développeuse web passionnée par la création</br>de sites modernes et responsifs.</span>
+          <span class="block">Spécialisée dans les technologies web actuelles</br> et </br>le développement frontend.</span>
+        </p>
+      </div>
+      
+      <div class="text-center md:text-left">
+        <h3 class="text-2xl font-bold mb-4">Compétences</h3>
+        <div class="space-y-5">
 
-        <!-- Carte Frameworks -->
-        <div class="bg-gray-800 p-4 rounded-xl shadow-lg hover:scale-105 transition">
-          <h3 class="text-xl font-semibold text-yellow-400 mb-4">Frameworks</h3>
-          <ul class="list-disc pl-6 space-y-2 text-gray-200">
-            <li>React</li>
-            <li>Laravel</li>
-            <li>Symfony</li>
-            <li>NodeJS</li>
-            <li>ExpressJS</li>
-          </ul>
-        </div>
+          <!-- HTML/CSS -->
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span>HTML/CSS</span><span>90%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="h-2.5 rounded-full skill-bar bg-gradient-to-r from-pink-400 to-red-500" data-width="90%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span>JavaScript</span><span>80%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="h-2.5 rounded-full skill-bar bg-gradient-to-r from-yellow-400 to-yellow-600" data-width="80%"></div>
+            </div>
+          </div>
 
-        <!-- Carte Bases de données -->
-        <div class="bg-gray-800 p-4 rounded-xl shadow-lg hover:scale-105 transition">
-          <h3 class="text-xl font-semibold text-yellow-400 mb-4">Bases de données</h3>
-          <ul class="list-disc pl-6 space-y-2 text-gray-200">
-            <li>SQL</li>
-            <li>MongoDB</li>
-            <li>MariaDB</li>
-            <li>PHPMyAdmin</li>
-          </ul>
+          <!-- React -->
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span>React</span><span>70%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="h-2.5 rounded-full skill-bar bg-gradient-to-r from-blue-400 to-blue-600" data-width="70%"></div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </section>
-    <section id="contact" class="px-6 md:px-10 max-w-full mx-auto text-center">
-        <div class="bg-gray-800 p-8 rounded-xl shadow-lg w-full transition-all transform hover:scale-105 hover:shadow-xl">
-          <p class="text-xl font-semibold mb-2 text-gray-300">Intéressée par mon profil ? N'hésitez pas à me contacter !</p>
+
+    </div>
+  </div>
+</section>
+<section id="projet" class="py-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Mes Projets</h2>
+    <div class="flex flex-col md:flex-row justify-between gap-6">
+      
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <a href="https://inquisitive-duckanoo-875a2c.netlify.app/" target="_blank" class="block">
+          <img src="img1.jpg" alt="Aperçu du projet Fansite" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Projet 1</h3>
+            <h4 class="text-xl font-semibold mb-2">Création d'un Fansite</h4>
+            <p class="text-sm text-gray-500 mb-2"><strong>Technos :</strong> HTML, CSS, JavaScript</p>
+            <p class="mb-4">Site dédié à Beyoncé.</p>
+            <span class="text-blue-500 hover:text-blue-600">Voir le projet</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <a href="https://guelmim-boussamganefamily.netlify.app/" target="_blank" class="block">
+          <img src="img2.jpg" alt="Projet 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Projet 2</h3>
+            <h4 class="text-xl font-semibold mb-2">Galerie de voyage</h4>
+            <p class="text-sm text-gray-500 mb-2"><strong>Technos :</strong> HTML, CSS, JS, Tailwind, Bootstrap</p>
+            <p class="mb-4">Voyage au cœur du Sud marocain.</p>
+            <span class="text-blue-500 hover:text-blue-600">Voir le projet</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <a href="https://tranquil-dango-aea124.netlify.app/" target="_blank" class="block">
+          <img src="img3.jpg" alt="Projet 3" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Projet 3</h3>
+            <h4 class="text-xl font-semibold mb-2">Site de recette</h4>
+            <p class="text-sm text-gray-500 mb-2"><strong>Technos :</strong> HTML, CSS, JS, Tailwind, Bootstrap</p>
+            <p class="mb-4">Recette et astuce de chef</p>
+            <span class="text-blue-500 hover:text-blue-600">Voir le projet</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300">&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-300">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-300">Conditions d'utilisation</a>
+                </div>
+            </div>
         </div>
-    </section>
-</main>
+</footer>
+
 <script>
-    let lastScrollTop = 0;
-    const navbar = document.getElementById("navbar");
-  
-    window.addEventListener("scroll", function () {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-      if (scrollTop > lastScrollTop) {
-        // scroll vers le bas -> cache la nav
-        navbar.style.transform = "translateY(-100%)";
-      } else {
-        // scroll vers le haut -> affiche la nav
-        navbar.style.transform = "translateY(0)";
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('opacity-100', 'translate-y-0');
       }
-  
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // évite les valeurs négatives
     });
-  </script>
-  
+  },
+  { threshold: 0.1 }
+);
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+
+const fadeInSections = document.querySelectorAll('.fade-in-section');
+fadeInSections.forEach(section => observer.observe(section));
+document.querySelectorAll('.skill-bar').forEach(bar => {
+  const width = bar.getAttribute('data-width');
+  bar.style.width = width;
+});
+
+
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-    
