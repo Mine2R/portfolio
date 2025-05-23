@@ -55,14 +55,23 @@
                             <img src="logo portfolio.jpg" alt="Logo" class="h-8 w-8">
                         </a>
                     </div>
-                    <div class="hidden md:flex items-center space-x-1">
-                        <a href="#accueil"
-                            class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-800 transition duration-300">Accueil</a>
-                        <a href="#a-propos-de-moi"
-                            class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-800 transition duration-300">À
-                            Propos de moi</a>
-                        <a href="#projet"
-                            class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-800 transition duration-300">Projets</a>
+                    <div class="hidden md:flex items-center space-x-1" id="main-menu">
+                        <a href="#accueil" class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-800 transition duration-300">Accueil</a>
+                        <a href="#a-propos-de-moi" class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-800 transition duration-300">À Propos</a>
+                         <a href="#projet" class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-800 transition duration-300">Projets</a>
+                    </div>
+                    <div class="md:hidden flex items-center">
+                        <button id="burger" class="outline-none mobile-menu-button">
+                            <svg class="w-6 h-6 text-gray-500 hover:text-gray-800"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-1">
@@ -78,6 +87,13 @@
             </div>
         </div>
     </nav>
+    <!-- Menu mobile caché au départ -->
+    <div class="hidden mobile-menu px-4 pb-4 md:hidden">
+    <a href="#accueil" class="block py-2 text-gray-500 hover:text-gray-800">Accueil</a>
+    <a href="#a-propos-de-moi" class="block py-2 text-gray-500 hover:text-gray-800">À Propos</a>
+    <a href="#projet" class="block py-2 text-gray-500 hover:text-gray-800">Projets</a>
+    </div>
+
 
     <section id="accueil" class="py-20 ">
         <div class="max-w-6xl mx-auto px-4">
@@ -244,7 +260,7 @@
         </div>
     </footer>
 
-    <script>
+<script>
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
@@ -292,10 +308,11 @@
   faders.forEach(fader => {
     appearOnScroll.observe(fader);
   });
-
-
-
-    </script>
+  document.getElementById("burger").addEventListener("click", function () {
+    const menu = document.querySelector(".mobile-menu");
+    menu.classList.toggle("hidden");
+});
+</script>
 </body>
 
 </html>
