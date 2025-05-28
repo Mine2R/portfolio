@@ -24,44 +24,60 @@
   max-width: 95%; /* ou un width fixe comme 90% si trop large */
   margin: 0 auto;
 }
+/* Utilisation de Tailwind CSS pour simplifier le CSS personnalisé */
+#a-propos .grid {
+  @apply items-start; /* ou items-center pour un alignement centré */
+}
+
+#a-propos .text-center p {
+  @apply text-left; /* meilleure lisibilité en desktop */
+}
+
+#a-propos .space-y-5 > div {
+  @apply mb-6; /* espace uniforme entre les blocs de compétences */
+}
+
+#a-propos .text-center,
+#a-propos .md\:text-left {
+  @apply h-full;
+}
+
+#a-propos .text-center.md\:text-center {
+  @apply max-w-4/5 mx-auto; /* ou un width fixe comme 90% si trop large */
+}
+
 /* Responsive pour les petits écrans */
 @media (max-width: 768px) {
-  /* Ajustement des marges internes */
   #accueil .text-xl {
-    font-size: 1rem;
+    @apply text-base;
   }
 
   #accueil h1 {
-    font-size: 1.8rem;
-    text-align: center;
+    @apply text-2xl text-center;
   }
 
   #a-propos .grid {
-    gap: 2rem;
+    @apply gap-8;
   }
 
   #a-propos .text-center,
   #a-propos .md\:text-left {
-    text-align: center;
+    @apply text-center;
   }
 
   #projet .flex {
-    flex-direction: column;
-    gap: 1.5rem;
+    @apply flex-col gap-6;
   }
 
   #projet img {
-    height: auto;
+    @apply h-auto;
   }
 
   footer .flex {
-    flex-direction: column;
-    gap: 0.75rem;
-    text-align: center;
+    @apply flex-col gap-3 text-center;
   }
 
   footer .flex a {
-    display: block;
-    margin-top: 0.25rem;
+    @apply block mt-1;
   }
 }
